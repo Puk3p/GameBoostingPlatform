@@ -1,0 +1,37 @@
+<% title = "Chestionar Gaming" %>
+<% bodyClass = "quiz-page" %>
+
+<div class="page-title dark-background" data-aos="fade">
+    <div class="container position-relative">
+        <h1>Chestionar Gaming</h1>
+        <p>Testează-ți cunoștințele despre lumea gaming-ului!</p>
+        <nav class="breadcrumbs">
+            <ol>
+                <li><a href="/">Acasă</a></li>
+                <li class="current">Chestionar</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<section class="section" id="quiz">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <form class="row g-4" action="/rezultat-chestionar" method="POST">
+            <% intrebari.forEach((q, index) => { %>
+                <div class="col-12">
+                    <label class="form-label"><%= index + 1 %>. <%= q.text %></label>
+                    <% for (let [optKey, optVal] of Object.entries(q.options)) { %>
+                        <div>
+                            <input type="radio" name="<%= q.id %>" value="<%= optKey %>" required>
+                            <%= optKey.toUpperCase() %>. <%= optVal %>
+                        </div>
+                    <% } %>
+                </div>
+            <% }) %>
+
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary">Trimite răspunsurile</button>
+            </div>
+        </form>
+    </div>
+</section>

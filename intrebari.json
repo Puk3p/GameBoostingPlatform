@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q1",
+    "text": "Care este scopul principal al unui serviciu de boosting?",
+    "options": {
+      "a": "Să pierzi meciuri intenționat",
+      "b": "Să urci în clasament mai rapid cu ajutorul unui jucător experimentat",
+      "c": "Să anulezi contul actual și să începi altul"
+    },
+    "corect": "b"
+  },
+  {
+    "id": "q2",
+    "text": "Ce înseamnă serviciul DuoQ?",
+    "options": {
+      "a": "Joci alături de prietenii tăi într-o echipă de doi",
+      "b": "Joci împreună cu un booster profesionist pentru a urca în clasament",
+      "c": "Oferi acces la două conturi simultan"
+    },
+    "corect": "b"
+  },
+  {
+    "id": "q3",
+    "text": "Care este una dintre măsurile de siguranță aplicate de echipa BoostPro?",
+    "options": {
+      "a": "Folosirea VPN pentru protecția contului",
+      "b": "Dezactivarea parolei",
+      "c": "Publicarea contului pe rețele sociale"
+    },
+    "corect": "a"
+  },
+  {
+    "id": "q4",
+    "text": "Ce jocuri sunt suportate de echipa BoostPro?",
+    "options": {
+      "a": "Doar League of Legends",
+      "b": "LOL, Valorant, CSGO, Fortnite și altele",
+      "c": "Doar jocuri mobile"
+    },
+    "corect": "b"
+  },
+  {
+    "id": "q5",
+    "text": "Ce înseamnă un pachet Legend Boost?",
+    "options": {
+      "a": "Boost până la nivelul Top Rank și coaching personalizat",
+      "b": "Boost doar în duo queue",
+      "c": "Acces gratuit la toate jocurile"
+    },
+    "corect": "a"
+  },
+  {
+    "id": "q6",
+    "text": "De ce se folosește autentificarea în doi pași pentru conturile de joc?",
+    "options": {
+      "a": "Pentru a adăuga animații în meniu",
+      "b": "Pentru protecția suplimentară a contului",
+      "c": "Pentru a accesa servere dedicate"
+    },
+    "corect": "b"
+  },
+  {
+    "id": "q7",
+    "text": "Ce presupune serviciul de coaching oferit de BoostPro?",
+    "options": {
+      "a": "Boosterul joacă în locul tău",
+      "b": "Primești feedback și strategii personalizate",
+      "c": "Se modifică setările jocului"
+    },
+    "corect": "b"
+  },
+  {
+    "id": "q8",
+    "text": "Care este riscul dacă oferi contul tău unui serviciu nesigur?",
+    "options": {
+      "a": "Îți cresc șansele la un bonus",
+      "b": "Poți pierde accesul permanent la cont",
+      "c": "Primești skinuri gratuite"
+    },
+    "corect": "b"
+  },
+  {
+    "id": "q9",
+    "text": "Cum poți verifica seriozitatea unui serviciu de boosting?",
+    "options": {
+      "a": "Verifici recenzii și testimoniale reale",
+      "b": "Te uiți doar dacă are un logo frumos",
+      "c": "Întrebi pe Discord aleatoriu"
+    },
+    "corect": "a"
+  },
+  {
+    "id": "q10",
+    "text": "Ce ar trebui să faci după finalizarea serviciului de boosting?",
+    "options": {
+      "a": "Să îți schimbi parola contului",
+      "b": "Să ștergi jocul complet",
+      "c": "Să îți vinzi contul imediat"
+    },
+    "corect": "a"
+  }
+]

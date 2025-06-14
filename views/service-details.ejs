@@ -1,0 +1,167 @@
+<% title = "Boosting Rank Games" %>
+<% bodyClass = "boosting-page" %>
+
+<div class="page-title dark-background" data-aos="fade">
+    <div class="container position-relative">
+        <h1>Boosting Services</h1>
+        <p>Crește-ți rangul în jocul preferat cu ajutorul jucătorilor noștri profesioniști. Rapid. Sigur. Garantat.</p>
+        <nav class="breadcrumbs">
+            <ol>
+                <li><a href="/#hero">Acasă</a></li>
+                <li class="current">Boosting Rank</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<section id="boosting-details" class="service-details section">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-5">
+            <div class="col-lg-8 order-lg-1 order-2">
+                <div class="service-main-content">
+                    <div class="service-header" data-aos="fade-up">
+                        <h1>Servicii de Boosting Jocuri</h1>
+                        <div class="service-meta d-flex flex-wrap gap-3 mb-3">
+                            <span class="badge bg-secondary"><i class="bi bi-controller me-1"></i> Suport pentru 10+ jocuri</span>
+                            <span class="badge bg-warning text-dark"><i class="bi bi-lightning me-1"></i> Boost rapid</span>
+                            <span class="badge bg-success"><i class="bi bi-shield-check me-1"></i> 100% Confidențial</span>
+                        </div>
+                        <p class="lead">
+                            Alege jocul tău preferat și lasă profesioniștii noștri să-ți ridice contul la nivelul dorit. Potrivit pentru jucători casual, competiționali sau streameri.
+                        </p>
+                    </div>
+
+                    <div class="service-tabs" data-aos="fade-up" data-aos-delay="200">
+                        <ul class="nav nav-tabs mb-3" id="boostTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#overview-tab" type="button" role="tab">Descriere</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#pricing-tab" type="button" role="tab">Pachete</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#security-tab" type="button" role="tab">Siguranță</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content p-3 border rounded bg-dark text-white">
+                            <div class="tab-pane fade show active" id="overview-tab" role="tabpanel">
+                                <h3 class="mb-3">Cum funcționează?</h3>
+                                <p class="mb-0">Selectezi jocul, rankul curent și cel dorit, iar echipa noastră se ocupă de restul. Procesul este complet transparent, iar comunicarea este constantă pe toată durata boostului.</p>
+                            </div>
+                            <div class="tab-pane fade" id="pricing-tab" role="tabpanel">
+                                <div class="row g-4">
+                                    <% produse.forEach(p => { %>
+                                        <div class="col-md-6">
+                                            <div class="card h-100 shadow-sm border-0">
+                                                <div class="card-body">
+                                                    <h4 class="card-title"><%= p.nume %></h4>
+                                                    <p class="card-text"><%= p.descriere %></p>
+                                                    <h5 class="text-primary"><%= p.pret %>€</h5>
+                                                    <% if (typeof utilizator !== 'undefined') { %>
+                                                        <a href="/cart/add?productId=<%= p._id %>" class="btn btn-warning text-white fw-semibold w-100 rounded-pill">Adaugă în coș</a>
+                                                    <% } else { %>
+                                                        <a href="/autentificare" class="btn btn-warning text-white fw-semibold w-100 rounded-pill">Loghează-te pentru a adăuga</a>
+                                                    <% } %>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <% }) %>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="security-tab" role="tabpanel">
+                                <p class="mb-0">Toți boosterii noștri folosesc VPN-uri private pentru a mima locația ta. Nu folosim niciun cheat sau metodă ilegală. Contul tău este în siguranță.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-gallery" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="mb-4">Exemple din Boost-uri Reale</h3>
+                        <div class="service-details-slider swiper init-swiper">
+                            <script type="application/json" class="swiper-config">
+                                {
+                                    "loop": true,
+                                    "speed": 800,
+                                    "autoplay": { "delay": 4000 },
+                                    "slidesPerView": 1,
+                                    "spaceBetween": 20,
+                                    "breakpoints": { "768": { "slidesPerView": 2 } },
+                                    "pagination": { "el": ".swiper-pagination", "clickable": true }
+                                }
+                            </script>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="assets/img/portfolio/setup_mlbb2.jpg" class="img-fluid rounded" alt="LoL Boost">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/portfolio/duo_carry.png" class="img-fluid rounded" alt="Valorant Boost">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar remains unchanged -->
+            <div class="col-lg-4 order-lg-2 order-1">
+                <div class="service-sidebar" data-aos="fade-left">
+                    <div class="action-card" data-aos="zoom-in">
+                        <h3>Comandă Boost Acum</h3>
+                        <p>Contactează-ne pe Discord sau folosește formularul de mai jos pentru a începe boost-ul tău astăzi!</p>
+                        <a href="#" class="btn btn-primary w-100">Începe Acum</a>
+                        <span class="guarantee mt-2 d-block text-center"><i class="bi bi-shield-lock"></i> Boost sigur & confidențial</span>
+                    </div>
+
+                    <div class="service-features-list" data-aos="fade-up">
+                        <h4>Jocuri Disponibile</h4>
+                        <ul>
+                            <li><i class="bi bi-controller"></i> League of Legends</li>
+                            <li><i class="bi bi-controller"></i> Valorant</li>
+                            <li><i class="bi bi-controller"></i> CS:GO / CS2</li>
+                            <li><i class="bi bi-controller"></i> Overwatch</li>
+                            <li><i class="bi bi-controller"></i> Apex Legends</li>
+                        </ul>
+                    </div>
+
+                    <div class="testimonial-card mt-4" data-aos="fade-up">
+                        <div class="testimonial-header d-flex align-items-center">
+                            <i class="bi bi-quote fs-2 me-2 text-muted"></i>
+                            <div class="rating text-warning">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+                        <blockquote class="blockquote mt-3">
+                            <p class="mb-0">"Boost-ul a fost super rapid și am primit constant update-uri. Recomand 100%!"</p>
+                        </blockquote>
+                        <div class="client-info d-flex align-items-center mt-3">
+                            <img src="assets/img/person/eu.jpg" alt="Client" class="client-image rounded-circle me-3" style="width: 50px; height: 50px;">
+                            <div class="client-details">
+                                <h6 class="mb-0">Lupu George</h6>
+                                <small class="text-muted">Jucător Valorant</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info mt-4" data-aos="fade-up">
+                        <h4>Contact Rapid</h4>
+                        <div class="contact-method d-flex align-items-start mb-3">
+                            <i class="bi bi-discord fs-4 me-3"></i>
+                            <div>
+                                <strong>Discord</strong>
+                                <p class="mb-0">.callmegeorge</p>
+                            </div>
+                        </div>
+                        <div class="contact-method d-flex align-items-start">
+                            <i class="bi bi-envelope fs-4 me-3"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p class="mb-0">lupu_george8@yahoo.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

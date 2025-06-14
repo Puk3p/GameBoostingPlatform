@@ -1,0 +1,27 @@
+<% title = "Rezultat Chestionar" %>
+<% bodyClass = "quiz-page" %>
+
+<div class="page-title dark-background" data-aos="fade">
+    <div class="container position-relative">
+        <h1>Rezultat Chestionar</h1>
+        <p>Felicitări pentru completarea testului!</p>
+        <nav class="breadcrumbs">
+            <ol>
+                <li><a href="/">Acasă</a></li>
+                <li class="current">Rezultat</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<section class="section" id="result">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="text-center">
+            <h2>Scorul tău: <strong><%= scor %></strong> din <%= total %></h2>
+            <p class="lead mt-3">
+                <%= scor === total ? "Legendă! Ai răspuns corect la tot!" : (scor >= 3 ? "Foarte bine, dar mai poți învăța!" : "Mai încearcă, gaming-ul e vast!") %>
+            </p>
+            <a href="/chestionar" class="btn btn-outline mt-4">Reîncearcă chestionarul</a>
+        </div>
+    </div>
+</section>
